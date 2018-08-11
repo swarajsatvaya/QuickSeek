@@ -1,0 +1,18 @@
+header.header-head{background: #DEE8F5; width: 100%; float: left; padding: 6px 15px; border-bottom: 2px solid #96A7BD;}
+a.logoimg{float: left}
+a.logoimg img{width: 150px}
+.padding-left{padding-left: 0}
+.padding-right{padding-right: 0}
+.right-alignheader{float: right; width: 100%}
+.right-alignheader ul{list-style-type: none; float: right; margin-top: 12px}
+.right-alignheader ul li{float: left; display: inline-block; margin-left: 15px; font-size: 15px;}
+.right-alignheader ul li a{color: #4398E6}
+.right-alignheader ul li a i{margin-right: 5px;}
+.footer-section{background: #DEE8F5; width: 100%; float: left; padding: 12px 15px;}
+.footer-section a{color: #595959; font-size: 11px;}
+.footer-section a:hover{color: #4398E6; text-decoration: none}
+
+/* 19-1-17(P) */
+
+
+.footer-newcss{position: fixed; bottom: 0;}

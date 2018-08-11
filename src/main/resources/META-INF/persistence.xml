@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="quickseek" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>in.myproject.test.domain.Admin</class>
+    <class>in.myproject.test.domain.State</class>
+    <class>in.myproject.test.domain.City</class>
+    <class>in.myproject.test.domain.Product</class>
+    <class>in.myproject.test.domain.User</class>
+    <class>in.myproject.test.domain.District</class>
+    <class>in.myproject.test.domain.Keyword</class>
+    <class>in.myproject.test.domain.Businessdetails</class>
+    <class>in.myproject.test.domain.Employeeposition</class>
+    <class>in.myproject.test.domain.Staffentry</class>
+    <class>in.myproject.test.domain.Ownerkeyword</class>
+    <class>in.myproject.test.domain.Login</class>
+    <class>in.myproject.test.domain.Contactdetails</class>
+    <class>in.myproject.test.domain.Employeedetails</class>
+    <class>in.myproject.test.domain.Customerregistration</class>
+    <class>in.myproject.test.domain.Ownerpicture</class>
+    <class>in.myproject.test.domain.Backofficeemployee</class>
+    <class>in.myproject.test.domain.Landingpageadvt</class>
+    <class>in.myproject.test.domain.Sideadvt</class>
+    <class>in.myproject.test.domain.Middleadvt</class>
+    <class>in.myproject.test.domain.Ownerform</class>
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/justdial?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+    </properties>
+  </persistence-unit>
+</persistence>

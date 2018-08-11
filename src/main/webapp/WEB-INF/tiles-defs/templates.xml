@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    
+    <!--Support services Template--> 
+    <definition name="common" template="/WEB-INF/layouts/classic.jsp">
+        <put-attribute name="header" value="/WEB-INF/layouts/header.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/layouts/footer.jsp" />
+        <put-attribute name="body" value="/WEB-INF/layouts/body.jsp" />
+    </definition>
+    
+    <definition name="login" extends="common">
+        <put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+    </definition>
+    <definition name="register2" extends="common">
+        <put-attribute name="body" value="/WEB-INF/views/register2.jsp" />
+    </definition>
+    <definition name="sigin" extends="common">
+        <put-attribute name="body" value="/WEB-INF/views/sigin.jsp" />
+    </definition>
+    <definition name="otp" extends="common">
+        <put-attribute name="body" value="/WEB-INF/views/otp.jsp" />
+    </definition>
+    <definition name="dashboard" extends="common">
+        <put-attribute name="body" value="/WEB-INF/views/dashboard.jsp" />
+    </definition>
+    <definition name="adminlogin" extends="common">
+        <put-attribute name="body" value="/WEB-INF/views/adminlogin.jsp" />
+    </definition>
+    
+	<definition name="manageviewCategory" extends="common">
+        <put-attribute name="body" value="/WEB-INF/views/manageviewCategory.jsp" />
+    </definition>
+    
+    <definition name="manageBrand" extends="common">
+        <put-attribute name="body" value="/WEB-INF/views/manageBrand.jsp"/>
+    </definition>
+    
+    <definition name="manageviewProduct" extends="common">
+        <put-attribute name="body" value="/WEB-INF/views/manageviewProduct.jsp"/> 
+    </definition>
+   
+   <definition name="manageCountry" extends="common">
+        <put-attribute name="body" value="/WEB-INF/views/manageCountry.jsp"/>
+    </definition>
+    <definition name="manageprofile" extends="common">
+        <put-attribute name="body" value="/WEB-INF/views/manageprofile.jsp"/>
+    </definition>
+    
+    
+</tiles-definitions>

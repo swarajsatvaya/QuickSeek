@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	http://www.springframework.org/schema/data/jpa
+    http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
+    
+    
+    <bean id="adminDao" class="in.myproject.test.dao.jpa.AdminDaoJpa"/>
+    <bean id="cityDao" class="in.myproject.test.dao.jpa.CityDaoJpa" />
+    <bean id="stateDao" class="in.myproject.test.dao.jpa.StateDaoJpa" />
+    <bean id="categoryDao" class="in.myproject.test.dao.jpa.CategoryDaoJpa" />
+    <bean id="subcategoryDao" class="in.myproject.test.dao.jpa.SubcategoryDaoJpa" />
+    <bean id="brandDao" class="in.myproject.test.dao.jpa.BrandDaoJpa" />
+    <bean id="productDao" class="in.myproject.test.dao.jpa.ProductDaoJpa" />
+    <bean id="userDao" class="in.myproject.test.dao.jpa.UserDaoJpa" />
+    <bean id="districtDao" class="in.myproject.test.dao.jpa.DistrictDaoJpa" />
+    <bean id="packagetableDao" class="in.myproject.test.dao.jpa.PackagetableDaoJpa" />
+    <bean id="keywordDao" class="in.myproject.test.dao.jpa.keywordDaoJpa" />
+    <bean id="employeepositionDao" class="in.myproject.test.dao.jpa.EmployeepositionDaoJpa" />
+    <bean id="ownerDao" class="in.myproject.test.dao.jpa.OwnerDaoJpa" />
+    <bean id="businessDao" class="in.myproject.test.dao.jpa.BusinessdaoJpa" />
+    <bean id="contactDao" class="in.myproject.test.dao.jpa.ContactDaoJpa" />
+    <bean id="customerDao" class="in.myproject.test.dao.jpa.CustomerDaoJpa" />
+    <bean id="ownerKeywordDao" class="in.myproject.test.dao.jpa.OwnerKeywordDaoJpa" />
+    <bean id="ownerPictureDao" class="in.myproject.test.dao.jpa.OwnerPictureDaoJpa" />
+    <bean id="loginDao" class="in.myproject.test.dao.jpa.LoginDaoJpa" />
+    <bean id="backOfficeDao" class="in.myproject.test.dao.jpa.BackOfficeDaoJpa"/>
+    <bean id="employeeDetailsDao" class="in.myproject.test.dao.jpa.EmployeeDetailsDaoJpa"/>
+    <bean id="landingAdDao" class="in.myproject.test.dao.jpa.LandingAdDaoJpa"/>
+    <bean id="sideAdDao" class="in.myproject.test.dao.jpa.SideAdDaoJpa"/>
+    <bean id="middleAdDao" class="in.myproject.test.dao.jpa.MiddleAdDaoJpa"/>
+    <bean id="upgradeDao" class="in.myproject.test.dao.jpa.upgradeDaoJpa"/>
+    <bean id="cartDao" class="in.myproject.test.dao.jpa.CartDaoJpa"/>
+  
+    <bean id="entityManagerFactory"
+          class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
+          p:dataSource-ref="dataSource" p:persistenceXmlLocation="classpath:/META-INF/persistence.xml"
+          p:persistenceUnitName="quickseek" />
+    <!-- bean post-processor for JPA annotations -->	
+    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+    <!-- Transaction Config  -->	
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"
+          p:entityManagerFactory-ref="entityManagerFactory" />
+ 
+    <!--    use declarative transaction management -->  
+    <tx:annotation-driven transaction-manager="transactionManager" />
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource" p:basename="message"></bean>
+    
+    
+    
+    <!--DataSource--> 
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        
+        <!--         Local Configuration   -->
+        <property name="url" value="jdbc:mysql://localhost:3306/qckseek"/>
+        <property name="username" value="root"/>
+        <property name="password" value=""/>
+        
+        <!--         Server Configuration   -->
+<!--        <property name="url" value="jdbc:mysql://node27726-qckseek.ind-cloud.everdata.com/qckseek" />
+        <property name="username" value="root"/>
+        <property name="password" value="Sundar@1234"/>-->
+        
+<!--              <property name="url" value="jdbc:mysql://node145708-env-4007684.j.layershift.co.uk/quickSeek" />
+        <property name="username" value="root"/>
+        <property name="password" value="YXPtrn57695"/>-->
+    </bean>
+
+</beans>
